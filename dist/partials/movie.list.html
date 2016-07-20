@@ -1,1 +1,27 @@
-<h1>movie list template loaded!</h1>
+<!-- start: movie list -->
+<div class="movie-list">
+
+	<h1>Your list of movies</h1>
+
+	<!-- start: movie by category -->
+	<div class="by-category">
+		
+		<!-- start: actor list -->
+		<ul>
+			<li ng-repeat="actor in actorList">
+				{{ actor.name }}
+				{{ actor.salary }}
+			</li>
+		</ul>
+		<!-- end: actor list -->
+
+		<div class="total">
+			<span>total:</span>
+			<span>{{ getTotal() }}</span>
+		</div>
+
+	</div>
+	<!-- end: movie by category -->
+
+</div>
+<!-- end: movie list -->
