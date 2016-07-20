@@ -1,14 +1,11 @@
 var angular = require('angular');
-var ngMock = require('angular-mocks');
+var uiRouter = require('angular-ui-router');
+var config = require('./app.config.js');
 
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', [uiRouter]);
 
-myApp.controller('helloWorldController', ['$scope', function($scope) {
+myApp.config(['$stateProvider', config]);
 
-    $scope.msg = '';
-
-    $scope.sayHello = function() {
-        $scope.msg = 'Hello World!';
-    };
-
+myApp.run(['$state', function ($state) {
+   $state.transitionTo('home'); 
 }]);
