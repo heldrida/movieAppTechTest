@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/_karma_webpack_//";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -36166,6 +36166,17 @@
 
 	module.exports = function ($scope) {
 		console.log('create controller loaded!');
+
+		$scope.categories = {
+			'movie_a': 'my movie a',
+			'movie_b': 'my movie b'
+		};
+
+		$scope.subcategories = {
+			'sub_a': 'my sub a',
+			'sub_b': 'my sub b'
+		};
+
 	}
 
 /***/ }

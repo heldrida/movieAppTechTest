@@ -1,1 +1,55 @@
-<h1>Movie create template loaded!</h1>
+<!-- start: create -->
+<div class="create">
+
+	<h1>Create</h1>
+	<p>Add movie to your list</p>
+
+	<form action="#">
+		
+		<fieldset>
+			<legend>Title:</legend>
+			<input type="text" name="title" placeholder="Title..." value="">
+		</fieldset>
+
+		<fieldset>
+			<legend>Personalia:</legend>
+			<select name="category">
+				<option value="" ng-repeat="cat in categories">{{ cat }}</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Personalia:</legend>
+			<select name="sub-category">
+				<option value="" ng-repeat="cat in subcategories">{{ cat }}</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<div class="cast">
+				<h2>cast</h2>
+				<ul>
+					<li>
+						<div class="col">actor</div>
+						<div class="col">salary</div>
+					</li>
+					<li>
+						<div class="col">
+							<input type="text" name="name" placeholder="name here...">
+						</div>
+						<div class="col">
+							<input type="text" name="salary" placeholder="salary here...">
+							<button class="remove">x</button>
+						</div>
+					</li>
+				</ul>
+				<button class="add">+</button>
+			</div>
+		</fieldset>
+
+		<button type="submit">create</button>
+
+	</form>
+	
+</div>
+<!-- end: create -->
