@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/_karma_webpack_//";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -49,6 +49,7 @@
 	var config = __webpack_require__(4);
 	var homeController = __webpack_require__(5);
 	var createController = __webpack_require__(6);
+	var listController = __webpack_require__(7);
 
 	var myApp = angular.module('myApp', [uiRouter]);
 
@@ -56,7 +57,7 @@
 
 	myApp.controller('homeController', ['$scope', homeController]);
 
-	myApp.controller('createController', ['$scope', createController]);
+	myApp.controller('listController', ['$scope', listController]);
 
 	myApp.run(['$state', function ($state) {
 	   $state.transitionTo('home'); 
@@ -36148,7 +36149,8 @@
 			})
 			.state('list', {
 				url: '/list',
-				templateUrl: 'partials/movie.list.html'
+				templateUrl: 'partials/movie.list.html',
+				controller: 'listController'
 			})
 	}
 
@@ -36177,6 +36179,14 @@
 			'sub_b': 'my sub b'
 		};
 
+	}
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = function ($scope) {
+		console.log('list controller loaded!');
 	}
 
 /***/ }

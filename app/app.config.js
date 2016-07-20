@@ -13,6 +13,7 @@ module.exports = function ($stateProvider) {
 		})
 		.state('list', {
 			url: '/list',
-			templateUrl: 'partials/movie.list.html'
+			templateUrl: 'partials/movie.list.html',
+			controller: 'listController'
 		})
 }
