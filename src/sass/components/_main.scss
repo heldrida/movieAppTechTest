@@ -1,5 +1,41 @@
 .movie-app {
-	* {
-		color: #fc3;
+	width: 100vw;
+	height: 100vh;
+	background-color: $darkPurple;
+	text-align: center;
+
+	h1 {
+		color: $frenchSkyBlue;
+		font-family: 'El Messiri', sans-serif;
+		font-size: 4em;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+	}
+
+	p {
+		font-size: 1.2em;
+		letter-spacing: 0.3em;
+		color: $frenchSkyBlue;
+		font-family: helvetica, sans-serif;
+		line-height: 1.5em;
+	}
+
+	button {
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-family: 'Oxygen', sans-serif;
+		display: inline-block;
+		cursor: pointer;
+		color: $rasperryPink;
+		border-color: $rasperryPink;
+		background-color: $lightCyan;
+		@include transition(all 0.3s);
+		&:hover {
+			color: $lightCyan;
+			background-color: $frenchSkyBlue;
+		}
 	}
 }

@@ -25,6 +25,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css?family=El+Messiri:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -68,5 +70,57 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.movie-app * {
-  color: #fc3; }
+.movie-app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #320E3B;
+  text-align: center; }
+  .movie-app h1 {
+    color: #7F96FF;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 0.1em; }
+  .movie-app p {
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
+    color: #7F96FF;
+    font-family: helvetica, sans-serif;
+    line-height: 1.5em; }
+  .movie-app button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Oxygen', sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    color: #E56399;
+    border-color: #E56399;
+    background-color: #DBFCFF;
+    -webkit-transition: all 0.3s;
+    -khtml-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .movie-app button:hover {
+      color: #DBFCFF;
+      background-color: #7F96FF; }
+
+.movie-app .home {
+  width: auto;
+  padding: 40px; }
+  .movie-app .home h1 {
+    color: #E56399; }
+  .movie-app .home p {
+    padding: 40px 0;
+    color: #fff;
+    font-weight: lighter;
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin-bottom: 30px; }
+  .movie-app .home .cta.add {
+    margin-right: 20px; }

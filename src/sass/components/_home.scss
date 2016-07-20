@@ -1,0 +1,23 @@
+.movie-app {
+	.home {
+		width: auto;
+		padding: 40px;
+		h1 {
+			color: $rasperryPink;
+		}
+		p {
+			padding: 40px 0;
+			color: #fff;
+			font-weight: lighter;
+			font-family: 'Oxygen', sans-serif;
+			letter-spacing: 0.1em;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		.cta {
+			&.add {
+				margin-right: 20px;
+			}
+		}
+	}
+}
