@@ -3,6 +3,14 @@ module.exports = function ($stateProvider) {
 		.state('home', {
 			name: 'home',
 			url: '/home',
-			templateUrl: '/partials/home.html'
-		});
+			templateUrl: 'partials/home.html'
+		})
+		.state('create', {
+			url: '/add',
+			templateUrl: 'partials/movie.create.html'
+		})
+		.state('list', {
+			url: '/list',
+			templateUrl: 'partials/movie.list.html'
+		})
 }
