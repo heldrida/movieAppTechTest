@@ -6,18 +6,22 @@
 	<!-- start: movie by category -->
 	<div class="by-category">
 		
-		<!-- start: actor list -->
-		<ul>
-			<li ng-repeat="actor in actorList">
-				{{ actor.name }}
-				{{ actor.salary }}
-			</li>
-		</ul>
-		<!-- end: actor list -->
+		<div class="category" ng-repeat="(key, movie) in myMovieList">
+			
+			<!-- start: actor list -->
+			<ul>
+				<li ng-repeat="actor in movie.actors">
+					{{ actor.name }}
+					{{ actor.salary }}
+				</li>
+			</ul>
+			<!-- end: actor list -->
 
-		<div class="total">
-			<span>total:</span>
-			<span>{{ getTotal() }}</span>
+			<div class="total">
+				<span>total:</span>
+				<span>{{ getTotal(movie.actors) }}</span>
+			</div>
+
 		</div>
 
 	</div>
