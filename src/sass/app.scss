@@ -12,9 +12,10 @@
 @import "base/icons";
 @import "base/default";
 
-
 // Components contains each self-contained component in its own partial
 @import "components/main";
+@import "components/add";
+@import "components/list";
 
 // Contains third-party styles.
 @import "vendors/all";
