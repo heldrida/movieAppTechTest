@@ -2,6 +2,13 @@
 	.home {
 		h1 {
 			color: $rasperryPink;
+			&:after {
+				content: " ";
+				display: inline-block;
+				width: 100%;
+				height: auto;
+				border-bottom: 1px solid $rasperryPink;
+			}
 		}
 		p {
 			padding: 40px 0;

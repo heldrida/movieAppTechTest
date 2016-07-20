@@ -108,10 +108,16 @@ table {
     transition: all 0.3s; }
     .movie-app button:hover {
       color: #DBFCFF;
-      background-color: #7F96FF; }
+      background-color: #E56399; }
 
 .movie-app .home h1 {
   color: #E56399; }
+  .movie-app .home h1:after {
+    content: " ";
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #E56399; }
 
 .movie-app .home p {
   padding: 40px 0;
