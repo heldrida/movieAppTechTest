@@ -71,10 +71,11 @@ table {
   border-spacing: 0; }
 
 .movie-app {
-  width: 100vw;
+  width: auto;
   height: 100vh;
   background-color: #320E3B;
-  text-align: center; }
+  text-align: center;
+  padding: 40px; }
   .movie-app h1 {
     color: #7F96FF;
     font-family: 'El Messiri', sans-serif;
@@ -98,7 +99,7 @@ table {
     cursor: pointer;
     color: #E56399;
     border-color: #E56399;
-    background-color: #DBFCFF;
+    background-color: #fff;
     -webkit-transition: all 0.3s;
     -khtml-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -109,18 +110,17 @@ table {
       color: #DBFCFF;
       background-color: #7F96FF; }
 
-.movie-app .home {
-  width: auto;
-  padding: 40px; }
-  .movie-app .home h1 {
-    color: #E56399; }
-  .movie-app .home p {
-    padding: 40px 0;
-    color: #fff;
-    font-weight: lighter;
-    font-family: 'Oxygen', sans-serif;
-    letter-spacing: 0.1em;
-    text-align: left;
-    margin-bottom: 30px; }
-  .movie-app .home .cta.add {
-    margin-right: 20px; }
+.movie-app .home h1 {
+  color: #E56399; }
+
+.movie-app .home p {
+  padding: 40px 0;
+  color: #fff;
+  font-weight: lighter;
+  font-family: 'Oxygen', sans-serif;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-bottom: 30px; }
+
+.movie-app .home .cta.add {
+  margin-right: 20px; }

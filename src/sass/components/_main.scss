@@ -1,8 +1,9 @@
 .movie-app {
-	width: 100vw;
+	width: auto;
 	height: 100vh;
 	background-color: $darkPurple;
 	text-align: center;
+	padding: 40px;
 
 	h1 {
 		color: $frenchSkyBlue;
@@ -31,7 +32,7 @@
 		cursor: pointer;
 		color: $rasperryPink;
 		border-color: $rasperryPink;
-		background-color: $lightCyan;
+		background-color: #fff;
 		@include transition(all 0.3s);
 		&:hover {
 			color: $lightCyan;

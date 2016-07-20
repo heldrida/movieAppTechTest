@@ -36136,7 +36136,7 @@
 			})
 			.state('create', {
 				url: '/add',
-				templateUrl: 'partials/movie.create.html'
+				templateUrl: 'partials/movie.add.html'
 			})
 			.state('list', {
 				url: '/list',
