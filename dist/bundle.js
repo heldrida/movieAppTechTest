@@ -47,10 +47,13 @@
 	var angular = __webpack_require__(1);
 	var uiRouter = __webpack_require__(3);
 	var config = __webpack_require__(4);
+	var homeController = __webpack_require__(5);
 
 	var myApp = angular.module('myApp', [uiRouter]);
 
 	myApp.config(['$stateProvider', config]);
+
+	myApp.controller('homeController', ['$scope', homeController]);
 
 	myApp.run(['$state', function ($state) {
 	   $state.transitionTo('home'); 
@@ -36132,7 +36135,8 @@
 			.state('home', {
 				name: 'home',
 				url: '/home',
-				templateUrl: 'partials/home.html'
+				templateUrl: 'partials/home.html',
+	            controller: 'homeController'
 			})
 			.state('create', {
 				url: '/add',
@@ -36142,6 +36146,14 @@
 				url: '/list',
 				templateUrl: 'partials/movie.list.html'
 			})
+	}
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = function ($scope) {
+		console.log('home controller loaded!');
 	}
 
 /***/ }
