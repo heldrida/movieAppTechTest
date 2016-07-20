@@ -7,8 +7,9 @@ module.exports = function ($stateProvider) {
             controller: 'homeController'
 		})
 		.state('create', {
-			url: '/add',
-			templateUrl: 'partials/movie.add.html'
+			url: '/create',
+			templateUrl: 'partials/movie.create.html',
+			controller: 'createController'
 		})
 		.state('list', {
 			url: '/list',
