@@ -141,12 +141,13 @@ body {
   margin-bottom: 40px; }
 
 .movie-app .movie-list h2 {
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'El Messiri', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 30px;
-  color: #320E3B; }
+  color: #320E3B;
+  font-size: 1.2em; }
 
 .movie-app .movie-list .by-category {
   width: 100%;
@@ -171,7 +172,11 @@ body {
   .movie-app .movie-list ul span, .movie-app .movie-list .total span {
     width: 150px;
     display: inline-block; }
+    .movie-app .movie-list ul span:nth-child(1), .movie-app .movie-list .total span:nth-child(1) {
+      color: #320E3B; }
 
 .movie-app .movie-list .total {
   margin: 30px 0 0;
-  text-transform: uppercase; }
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1em; }

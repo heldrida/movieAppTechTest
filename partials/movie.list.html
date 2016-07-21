@@ -14,14 +14,14 @@
 			<ul>
 				<li ng-repeat="actor in movie.actors">
 					<span>{{ actor.name }}</span>
-					<span>{{ actor.salary }}</span>
+					<span>{{ actor.salary }}$</span>
 				</li>
 			</ul>
 			<!-- end: actor list -->
 
 			<div class="total">
 				<span>total:</span>
-				<span>{{ getTotal(movie.actors) }}</span>
+				<span>{{ getTotal(movie.actors) }}$</span>
 			</div>
 
 		</div>
