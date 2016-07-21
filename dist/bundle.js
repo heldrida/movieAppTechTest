@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/_karma_webpack_//";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -50,14 +50,20 @@
 	var homeController = __webpack_require__(5);
 	var createController = __webpack_require__(6);
 	var listController = __webpack_require__(7);
+	var categoryService = __webpack_require__(10);
+	var myMovieService = __webpack_require__(11);
 
 	var myApp = angular.module('myApp', [uiRouter]);
 
 	myApp.config(['$stateProvider', config]);
 
+	myApp.factory('categoryService', categoryService);
+
+	myApp.factory('myMovieService', myMovieService);
+
 	myApp.controller('homeController', ['$scope', homeController]);
 
-	myApp.controller('listController', ['$scope', listController]);
+	myApp.controller('listController', ['$scope', 'myMovieService', listController]);
 
 	myApp.run(['$state', function ($state) {
 	   $state.transitionTo('home'); 
@@ -36187,61 +36193,10 @@
 
 	var _ = __webpack_require__(8);
 
-	module.exports = function ($scope) {
+	module.exports = function ($scope, myMovieService) {
 
 		// todo: service to manage the movie list properly
-		$scope.myMovieList = [{
-			title: 'movieA',
-			category: 'categoryA',
-			subcategory: 'subCategoryA',
-			actors: [{
-				name: 'name1',
-				salary: 5000	
-			}, {
-				name: 'name2',
-				salary: 65000
-			}, {
-				name: 'name3',
-				salary: 16500
-			}]
-		}, {
-			title: 'movieB',
-			category: 'categoryB',
-			subcategory: 'subCategoryB',
-			actors: [{
-				name: 'name1',
-				salary: 66000
-			}, {
-				name: 'name2',
-				salary: 12500
-			}, {
-				name: 'name3',
-				salary: 3295
-			}, {
-				name: 'name4',
-				salary: 85300
-			}, {
-				name: 'name5',
-				salary: 85300
-			}, {
-				name: 'name6',
-				salary: 85300
-			}]
-		}, {
-			title: 'movieC',
-			category: 'categoryB',
-			subcategory: 'subCategoryB',
-			actors: [{
-				name: 'name1',
-				salary: 66000
-			}, {
-				name: 'name5',
-				salary: 85300
-			}, {
-				name: 'name6',
-				salary: 85300
-			}]
-		}];
+		$scope.myMovieList = myMovieService.get();
 
 		$scope.getTotal = function (actors) {
 			return actors.reduce(function(total, actor) {
@@ -52677,6 +52632,106 @@
 		return module;
 	}
 
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	module.exports = function() {
+
+	    var categories = {
+			"action": ["comedy", "crime", "thriller"],
+			"animation": ["adventure", "comedy", "family"],
+			"documentary": ["biography", "crime", "history"],
+			"horror": ["comedy", "drama", "sci-fi"],
+			"musical": ["comedy", "romance"],
+			"war": ["action", "biography"],
+			"adventure": ["biography", "war"],
+			"drama": ["romance", "musical"],
+			"sci-fi": ["action", "drama"],
+			"mystery": ["adventure", "thriller"],
+			"western": ["action", "comedy"],
+			"thriller": ["action", "mystery"]
+		};
+
+	    return {
+	        getCategories: function () {
+	        	return categories;
+	        }
+	    }
+
+	}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = function() {
+
+		var list = [{
+			title: 'movieA',
+			category: 'categoryA',
+			subcategory: 'subCategoryA',
+			actors: [{
+				name: 'name1',
+				salary: 5000	
+			}, {
+				name: 'name2',
+				salary: 65000
+			}, {
+				name: 'name3',
+				salary: 16500
+			}]
+		}, {
+			title: 'movieB',
+			category: 'categoryB',
+			subcategory: 'subCategoryB',
+			actors: [{
+				name: 'name1',
+				salary: 66000
+			}, {
+				name: 'name2',
+				salary: 12500
+			}, {
+				name: 'name3',
+				salary: 3295
+			}, {
+				name: 'name4',
+				salary: 85300
+			}, {
+				name: 'name5',
+				salary: 85300
+			}, {
+				name: 'name6',
+				salary: 85300
+			}]
+		}, {
+			title: 'movieC',
+			category: 'categoryB',
+			subcategory: 'subCategoryB',
+			actors: [{
+				name: 'name1',
+				salary: 66000
+			}, {
+				name: 'name5',
+				salary: 85300
+			}, {
+				name: 'name6',
+				salary: 85300
+			}]
+		}];
+
+		return {
+			get: function () {
+				return list;
+			},
+
+			set: function (data) {
+				list.push(data);
+			}
+		}
+
+	}
 
 /***/ }
 /******/ ]);
