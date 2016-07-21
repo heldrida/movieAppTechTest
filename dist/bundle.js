@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/_karma_webpack_//";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -36196,6 +36196,8 @@
 	module.exports = function ($scope, myMovieService) {
 
 		// todo: service to manage the movie list properly
+		myMovieService.sortBy('desc');
+
 		$scope.myMovieList = myMovieService.get();
 
 		$scope.getTotal = function (actors) {
@@ -52664,7 +52666,9 @@
 
 /***/ },
 /* 11 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+	var _ = __webpack_require__(8);
 
 	module.exports = function() {
 
@@ -52674,10 +52678,10 @@
 			subcategory: 'subCategoryA',
 			actors: [{
 				name: 'name1',
-				salary: 5000	
+				salary: 10000000	
 			}, {
 				name: 'name2',
-				salary: 65000
+				salary: 888865000
 			}, {
 				name: 'name3',
 				salary: 16500
@@ -52707,14 +52711,14 @@
 			}]
 		}, {
 			title: 'movieC',
-			category: 'categoryB',
-			subcategory: 'subCategoryB',
+			category: 'categoryC',
+			subcategory: 'subCategoryC',
 			actors: [{
 				name: 'name1',
-				salary: 66000
+				salary: 7866000
 			}, {
 				name: 'name5',
-				salary: 85300
+				salary: 5585300
 			}, {
 				name: 'name6',
 				salary: 85300
@@ -52728,6 +52732,23 @@
 
 			set: function (data) {
 				list.push(data);
+			},
+
+			sortBy: function (option) {
+
+				list = _.sortBy(list, function (o) {
+					var sum = o.actors.reduce(function(total, actor) {
+						return total + actor.salary;
+					}, 0);
+					return sum;
+				});
+
+
+				if (option === 'desc') {
+					_.reverse(list);
+				}
+
+				return list;
 			}
 		}
 
