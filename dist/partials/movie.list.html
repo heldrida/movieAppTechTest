@@ -3,6 +3,12 @@
 
 	<h1>Your list of movies</h1>
 
+	<select 
+		ng-model="sort_by" 
+		ng-options="o.name as o.name for o in options"
+		ng-change="sortBy(sort_by)">
+	</select>
+
 	<!-- start: movie by category -->
 	<div class="by-category">
 		
