@@ -8,11 +8,13 @@
 		
 		<div class="category" ng-repeat="(key, movie) in myMovieList">
 			
+			<h2>{{ movie.title }} ({{ movie.category }})</h2>
+
 			<!-- start: actor list -->
 			<ul>
 				<li ng-repeat="actor in movie.actors">
-					{{ actor.name }}
-					{{ actor.salary }}
+					<span>{{ actor.name }}</span>
+					<span>{{ actor.salary }}</span>
 				</li>
 			</ul>
 			<!-- end: actor list -->

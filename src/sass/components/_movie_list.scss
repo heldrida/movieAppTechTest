@@ -1,5 +1,52 @@
 .movie-app {
-	.movie_list {
+	.movie-list {
+		h1 {
+			color: $rasperryPink;
+			margin-bottom: 40px;
+		}
+		h2 {
+			font-family: 'Oxygen', sans-serif;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			margin-bottom: 30px;
+			color: $darkPurple;
+		}
+
+		.by-category {
+			width: 100%;
+			height: auto;
+			margin: 30px auto;
+			max-width: 768px;
+		}
+
+		.category {
+			padding: 30px 30px;
+			text-align: left;
+			color: $lightCyan;
+			background-color: $frenchSkyBlue;
+			margin-bottom: 20px;
+			border-bottom: 4px solid $rasperryPink;
+		}
+
+		ul, .total {
+			text-transform: capitalize;
+			li, span {
+				letter-spacing: 0.1em;
+			}
+			li {
+				margin-bottom: 5px;
+			}
+			span {
+				width: 150px;
+				display: inline-block;
+			}
+		}
+
+		.total {
+			margin: 30px 0 0;
+			text-transform: uppercase;
+		}
 
 	}
 }

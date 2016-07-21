@@ -1,7 +1,13 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: $darkPurple;
+}
+
 .movie-app {
 	width: auto;
-	height: 100vh;
-	background-color: $darkPurple;
+	height: auto;
 	text-align: center;
 	padding: 40px;
 

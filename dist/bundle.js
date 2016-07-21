@@ -36227,6 +36227,20 @@
 				name: 'name6',
 				salary: 85300
 			}]
+		}, {
+			title: 'movieC',
+			category: 'categoryB',
+			subcategory: 'subCategoryB',
+			actors: [{
+				name: 'name1',
+				salary: 66000
+			}, {
+				name: 'name5',
+				salary: 85300
+			}, {
+				name: 'name6',
+				salary: 85300
+			}]
 		}];
 
 		$scope.getTotal = function (actors) {
